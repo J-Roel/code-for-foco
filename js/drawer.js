@@ -13,10 +13,11 @@ $( document ).ready(function() {
 		$('#drawer').slideToggle('slow');
 	});
 
-  //   $('.drawer-side').children().click(function(){
-		// $('#drawer-button').removeClass( "active" );
-		// $('#drawer').slideToggle('fast');    	
-  //   });
+    $('.drawer-side a').click(function(){
+    	console.log("Hello");
+		$('#drawer-button').removeClass( "active" );
+		$('#drawer').slideToggle('slow');    	
+    });
 
 
 

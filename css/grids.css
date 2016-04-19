@@ -138,9 +138,11 @@
 	left:0;
 	right:0;
 	bottom:0;
-	background: url('../assets/slideshow/image-a.jpg') center / cover;
 }
-
+.hero-image img{
+	width: 100%;
+	height: 100%;
+}
 
 /* ------------------------------------------------ */
 /*		NAVIGATION									*/
@@ -201,7 +203,10 @@ nav a, nav a:active, nav a:selected {
 	position: fixed;
 	left: 20px;
 	top: 30px;
-	padding: 10px 35px 16px 0px;
+	width: 30px;
+	height: 10px;
+	/*padding: 10px 35px 16px 0px;*/
+	padding: 16px 5px 12px 0px;
 	cursor: pointer;
 	z-index: 1000;
 	background-color: #8E24AA;
@@ -277,22 +282,26 @@ nav a, nav a:active, nav a:selected {
 	float: left;
 	font-size: 1em;
 	width: 100%;
-	color: #000;
+	color: #999;
 	padding: 0;
-	margin: 4px;
+	margin: 7px;
 	transition: 0.2s;
 }
 #drawer a:hover{
-	color: #ccc;
-	text-shadow: 0.1px 0.1px 1px rgba(0,0,0,0.3);
+	color: #000;
 }
 #drawer h4{
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-weight: bold;
 	color: #000;
 	margin: 0;
+	padding-top: 20px;
 }
 
+#drawer .social-container{
+	padding: 0;
+	margin: 0;
+}
 #drawer .social-container a{
 	display: inline-block;
 	width: auto;
@@ -313,7 +322,7 @@ nav a, nav a:active, nav a:selected {
 	background-color: #8E24AA;
 	border: 2px solid #761f8e;
 	color: #fff;
-	margin-left: 2px;
+	margin-left: 1px;
 	margin-top: 4px;
 	cursor: pointer;
 }
