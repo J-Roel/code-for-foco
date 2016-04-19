@@ -1,0 +1,356 @@
+
+/*
+	GRIDS.CSS
+	- grids contains both responsive and fixed 980 grid systems
+		- prepend "fixed-" before the class name to make it fixed
+	- TODO: add media queries
+
+/* ------------------------------------------------ */
+/*		Structure Basics							*/
+/* ------------------------------------------------ */
+
+/* -- Column Row (aka Clearfix) -- */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ------------------------------------------------ */
+/*		RESPONSIVE									*/
+/* ------------------------------------------------ */
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/* -------- COLUMN LAYOUTS -------*/
+/* -- Column Sizes -- */
+ 
+.one-eighth { width: 10.125%; }
+.one-fourth   { width:21.25%;}
+.one-third    { width:29.333%; }
+.one-half     { width:45.5%; }
+.two-third    { width:61.666%; }
+.three-fourth { width:69.75%;}
+.three-fourth { width:79.75%;}
+.one-column   { width:94%; }
+.full-column  { width:100%; }
+ 
+/* -- Column Margin & Float-- */
+.one-half,.one-third,.two-third,
+.three-fourth,.one-fourth,.one-column,
+.full-column {
+  margin-left:3%; 
+  margin-top:1%;
+  float:left;
+}
+ 
+
+
+
+/* ------------------------------------------------ */
+/*		Fixed										*/
+/* ------------------------------------------------ */
+
+.fixed-container {
+  width: 980px;
+  margin: auto;
+}
+
+
+/* ----- =columns ----- */
+.fixed-one-half {
+	width: 460px;
+}
+.fixed-one-third {
+	width: 300px;
+}
+.fixed-two-third {
+	width: 620px;
+}
+.fixed-one-fourth {
+	width: 220px;
+}
+.fixed-three-fourth {
+	width: 700px;
+}
+.fixed-full-column {
+	width: 940px;
+}
+
+.fixed-one-half,
+.fixed-one-third,
+.fixed-two-third,
+.fixed-one-fourth,
+.fixed-three-fourth,
+.fixed-full-column {
+	float: left;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+/*------------------------------------------------------*/
+/*FULL PAGE SECTION										*/
+/*------------------------------------------------------*/
+/* The full page sections set */
+.section{
+	height: 100vh;
+	min-height: 100%;
+	width: 100%;
+	padding-top: 40px;/* can comment out if not using menu drawer*/
+
+	/*	Setting position to relative allows us to
+		control the flow of the section. 
+		The flow will be like normal if you
+		simply float left/right or display block/inline,
+		but any element with position:absolute will 
+		stay in the flow of said section and
+		left/right/top/bottom will be in respect to
+		the parent (which is section in this case)
+	*/
+	position:relative;
+
+}
+.section:after { /* fixes issue, don't have to clearfix anymore */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* HERO IMAGE */
+/* 
+	Simply add
+	
+	<div class="hero-image">
+		<img src="yourimage.jpg">
+	</div>
+	
+	And the section will use the said image as a fullscreen background
+*/
+.hero-image{
+	position: absolute;
+	top:-50px;
+	left:0;
+	right:0;
+	bottom:0;
+	background: url('../assets/slideshow/image-a.jpg') center / cover;
+}
+
+
+/* ------------------------------------------------ */
+/*		NAVIGATION									*/
+/* ------------------------------------------------ */
+nav {
+	width: 100%;
+	height: 100%;
+}
+nav .logo{
+	width: 64px;
+	height: 64px;
+}
+
+
+nav .nav-title{
+	display: inline-block;
+	font-family: 'Quantico', sans-serif;
+	font-size: 1em;
+	color: #fff;
+	width: 30%;
+	margin: 0;
+	text-align: center;
+}
+nav .nav-links{
+	display: inline-block;
+	width: 60%;
+	margin: 0;
+	float: right;
+}
+nav a{
+	display: inline-block;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1em;
+	line-height: 50px;
+	vertical-align: middle;
+	color: #fff;
+	padding: 0 15px 0 0;
+	transition: 0.5s;
+}
+nav a:hover {
+	color: #ccc;
+	text-shadow: 0.1px 0.1px 1px rgba(0,0,0,0.3);
+}
+/* Clean up nav links */
+nav a, nav a:active, nav a:selected {
+	text-decoration: none;
+}
+
+
+
+
+
+
+/*------------------------------------------------------*/
+/* DRAWER MENU */
+/*------------------------------------------------------*/
+#drawer-button{
+	position: fixed;
+	left: 20px;
+	top: 30px;
+	padding: 10px 35px 16px 0px;
+	cursor: pointer;
+	z-index: 1000;
+	background-color: #8E24AA;
+	outline: 5px solid #8E24AA;
+}
+#drawer-button span, #drawer-button span:before, #drawer-button span:after {
+  
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#drawer-button span:before {
+  top: -10px; 
+}
+#drawer-button span:after {
+  bottom: -10px;
+}
+
+#drawer-button span, #drawer-button span:before, #drawer-button span:after {
+  transition: all 500ms ease-in-out;
+}
+#drawer-button.active span {
+  background-color: transparent;
+}
+#drawer-button.active span:before, #drawer-button.active span:after {
+  top: 0;
+}
+#drawer-button.active span:before {
+  transform: rotate(45deg);
+  background: #fff;
+  z-index: 1000;
+}
+#drawer-button.active span:after {
+  transform: rotate(-45deg);
+  background: #fff;
+  z-index: 1000;
+}
+#drawer{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	z-index: 80;
+}
+.drawer-side{
+	float: left;
+	width: 25%;
+	height: 100vh;
+	margin:0;
+	padding: 5% 5px 1% 1%;
+	background: rgba(255,255,255,0.95);
+	overflow-y:auto;
+}
+.screen-side{
+	float: left;
+	width: 72%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	margin: 0;
+	padding: 0;
+}
+#drawer a{
+	font-family: 'Nunito', sans-serif;
+	float: left;
+	font-size: 1em;
+	width: 100%;
+	color: #000;
+	padding: 0;
+	margin: 4px;
+	transition: 0.2s;
+}
+#drawer a:hover{
+	color: #ccc;
+	text-shadow: 0.1px 0.1px 1px rgba(0,0,0,0.3);
+}
+#drawer h4{
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000;
+	margin: 0;
+}
+
+#drawer .social-container a{
+	display: inline-block;
+	width: auto;
+}
+
+
+/* ------------------------------------------------ */
+/*		Social Mobile								*/
+/* ------------------------------------------------ */
+/*Uses Font-Awesome Icons, make sure to cdn or download*/
+.social-mobile-icon{
+	width: 70px;
+	height: 70px;
+	font-size: 50px;
+	line-height: 70px;
+	vertical-align: middle;
+	text-align: center;
+	background-color: #8E24AA;
+	border: 2px solid #761f8e;
+	color: #fff;
+	margin-left: 2px;
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+
+
+/* ------------------------------------------------ */
+/*		Media Queries								*/
+/* ------------------------------------------------ */
+
+@media screen and (min-width:600px) {
+ /* section {
+    margin-left: 25%;
+  }*/
+}
+
+
+
+
+
+@media screen and (max-width:1000px) {
+	nav .nav-links {
+		display: none;
+		width:0;
+		height:0;
+	}
+	nav .nav-title {
+		width: 100%;
+	}
+}
+
+
+/* ------------------------------------------------ */
+/*		DECORATIONS									*/
+/* ------------------------------------------------ */
+hr{
+	margin: 4px;
+	width: 90%;
+}
+
