@@ -2,7 +2,6 @@ $( document ).ready(function() {
 
 
 	$('#drawer-button').click(function(){
-		
 		this.classList.toggle( "active" );
 		$('#drawer').slideToggle('slow');
 

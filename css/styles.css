@@ -4,7 +4,7 @@ html, body{
 	margin:0;
 }
 /*------------------------------------------------------*/
-/* Typography */
+/* Typography - OVERRIDE*/
 /*------------------------------------------------------*/
 h1,h2,h3,h4,h5,h6,h7{
 	font-family: 'Quantico', sans-serif;
@@ -31,13 +31,7 @@ a:active {
 a:hover {
 	text-decoration: none;
 }
-.title{
-	font-family: 'Quantico', sans-serif;
-	font-size: 2em;
-	padding:0;
-	margin:0;
-	color: #fff;
-}
+
 .inset-against-light{
 	display: inline-block;
 	background-color: #444;
@@ -70,123 +64,31 @@ img {
 /* HEADER */
 /*------------------------------------------------------*/
 header{
-	
-	
 	width: 100%;
 	height: 50px;
-	
-}
-.header {
-  z-index: 1;
-  position: relative;
-}
-
-.header .skew:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: visible;
-  width: 100%;
-  height: 250px;
-  background: #8E24AA;
-  z-index: -1;
-  -webkit-transform: skewY(-2deg);
-  -moz-transform: skewY(-2deg);
-  -ms-transform: skewY(-2deg);
-  -o-transform: skewY(-2deg);
-  transform: skewY(-2deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: initial;
-}
-
-.header .skew .header-inner {
-  padding: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
-
-
-/*--------------------------*/
-/*  Navigation - Primary */
-/*--------------------------*/
-
-
-
-
-
-
-/* ------------------- SECTION LANDING w/SLIDESHOW*/
-.section-one{
-}
-
-
-.main-container {
-  background: #8E24AA;
-  position: absolute;
-  left:0;
-  bottom:0;
-  width: 100%
-}
-
-.main-container:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: -36px;
-  width: 100%;
-  height: 100%;
-  background: #8E24AA;
-  -webkit-transform: skewY(2.5deg);
-  -moz-transform: skewY(2.5deg);
-  -ms-transform: skewY(2.5deg);
-  -o-transform: skewY(2.5deg);
-  transform: skewY(2.5deg);
-  -webkit-backface-visibility: hidden;
-}
-
-.main-section {
-  margin: 10px auto;
-  padding: 0 20px;
-  padding-bottom: 10px;
-  position: relative;
-  max-width: 600px;
-  height: 25vh;
-}
-
+/* ------------------- SECTION LANDING*/
+.section-one{  }
 
 
 
 /* ------------------- SECTION EVENTS*/
-.section-events{
+.events{
+	padding-top: 30px;
+}
+.events-background{
 	background-color: white;
 }
-
-.recent{
-	padding: 30px;
-	overflow-y:auto;
-}
-.recent-posts{
-	
-}
-.recent-events {
-	
-}
-
 
 
 
 /* ------------------- SECTION MISSION*/
-.section-mission{
-	
+.mission-background{
 	background: -moz-linear-gradient(-45deg, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 40%, rgba(255,255,255,0) 100%), url('../assets/slideshow/image-b.jpg') center / cover;
   	background: -webkit-linear-gradient(-45deg, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%), url('../assets/slideshow/image-b.jpg') center / cover;
   	background: linear-gradient(135deg, rgba(255,255,255,1) 1%,rgba(255,255,255,1) 40%,rgba(255,255,255,0) 100%), url('../assets/slideshow/image-b.jpg') center / cover;
-}
-.mission{
-	padding: 10em 0 0 5em;
 }
 
 
@@ -202,44 +104,6 @@ header{
 	background-color: white;
 }
 
-
-
-
-
-
-
-/*--------------------------*/
-/*  RECENT EVENTS CARD */
-/*--------------------------*/
-.ecard {
-  width: 100%;
-  margin: 10px;
-  background-color: #ccc;
-}
-.ecard img{
-	display: inline-block;
-	width: 30%;
-	height: 200px;
-	margin: 0;
-	padding: 0;
-
-}
-.ecard .info{
-	display: inline-block;
-	width: 60%;
-	margin: 0;
-	padding: 10px;
-}
-.ecard .title{
-	font-family: 'Quantico', sans-serif;
-	1.4em
-}
-.ecard .desc{
-	font-family: 'Nunito', sans-serif;
-	font-size: 1.1em;
-	/*background-color: #8E24AA;*/
-
-}
 
 
 

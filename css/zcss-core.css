@@ -1,9 +1,50 @@
 
 /*
-	GRIDS.CSS
-	- grids contains both responsive and fixed 980 grid systems
-		- prepend "fixed-" before the class name to make it fixed
-	- TODO: add media queries
+	zcss-core.css
+*/
+
+
+
+/*------------------------------------------------------*/
+/* Typography */
+/*------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6,h7{
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+p,i,quote,a{
+	font-family: "Courier New", Courier, monospace;
+}
+h1{
+	/*font-family: 'Nunito', sans-serif;*/
+	font-family: 'Quantico', sans-serif;
+}
+
+h4{
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+code {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 1em;
+	font-weight: bold;
+	color: #000;
+	background: #ccc;
+}
+code strong{
+	color: red;
+	font-weight: bolder;
+}
+
 
 /* ------------------------------------------------ */
 /*		Structure Basics							*/
@@ -17,18 +58,15 @@
 }
 
 
+
 /* ------------------------------------------------ */
 /*		RESPONSIVE									*/
 /* ------------------------------------------------ */
+.container {  width: 100%;  margin: auto; }
 
-.container {
-  width: 100%;
-  margin: auto;
-}
 
 /* -------- COLUMN LAYOUTS -------*/
 /* -- Column Sizes -- */
- 
 .one-eighth { width: 10.125%; }
 .one-fourth   { width:21.25%;}
 .one-third    { width:29.333%; }
@@ -36,50 +74,34 @@
 .two-third    { width:61.666%; }
 .three-fourth { width:69.75%;}
 .three-fourth { width:79.75%;}
-.one-column   { width:94%; }
-.full-column  { width:100%; }
+.full-page-pad,.full-column-pad   { width:94%; }
+.full-page,.full-column  { width:100%; }
  
 /* -- Column Margin & Float-- */
 .one-half,.one-third,.two-third,
 .three-fourth,.one-fourth,.one-column,
-.full-column {
+.full-page-pad,.full-page {
   margin-left:3%; 
   margin-top:1%;
   float:left;
 }
  
 
-
-
 /* ------------------------------------------------ */
 /*		Fixed										*/
 /* ------------------------------------------------ */
-
 .fixed-container {
   width: 980px;
   margin: auto;
 }
 
-
 /* ----- =columns ----- */
-.fixed-one-half {
-	width: 460px;
-}
-.fixed-one-third {
-	width: 300px;
-}
-.fixed-two-third {
-	width: 620px;
-}
-.fixed-one-fourth {
-	width: 220px;
-}
-.fixed-three-fourth {
-	width: 700px;
-}
-.fixed-full-column {
-	width: 940px;
-}
+.fixed-one-half { width: 460px; }
+.fixed-one-third { width: 300px; }
+.fixed-two-third { width: 620px; }
+.fixed-one-fourth {	width: 220px; }
+.fixed-three-fourth { width: 700px; }
+.fixed-full-column { width: 940px; }
 
 .fixed-one-half,
 .fixed-one-third,
@@ -102,7 +124,7 @@
 	height: 100vh;
 	min-height: 100%;
 	width: 100%;
-	padding-top: 40px;/* can comment out if not using menu drawer*/
+	
 
 	/*	Setting position to relative allows us to
 		control the flow of the section. 
@@ -113,7 +135,7 @@
 		left/right/top/bottom will be in respect to
 		the parent (which is section in this case)
 	*/
-	position:relative;
+	/*position:relative;*/
 
 }
 .section:after { /* fixes issue, don't have to clearfix anymore */
@@ -123,28 +145,25 @@
 }
 
 /* HERO IMAGE */
-/* 
-	Simply add
-	
-	<div class="hero-image">
-		<img src="yourimage.jpg">
-	</div>
-	
-	And the section will use the said image as a fullscreen background
-*/
 .hero-image{
-	position: absolute;
-	top:-50px;
-	left:0;
-	right:0;
-	bottom:0;
+	/*position: absolute;*/
+	margin-top: -110px;
+
+	/*height: 100vh;*/
+	background-size: center / cover;
+
+
+
+
+
 }
 .hero-image img{
 	width: 100%;
-	height: 100%;
+	/*min-height: 100%;*/
+	height: 100vh;
 }
 
-/* ------------------------------------------------ */
+/* ------------------------------------------------ 
 /*		NAVIGATION									*/
 /* ------------------------------------------------ */
 nav {
@@ -159,12 +178,18 @@ nav .logo{
 
 nav .nav-title{
 	display: inline-block;
-	font-family: 'Quantico', sans-serif;
-	font-size: 1em;
-	color: #fff;
 	width: 30%;
 	margin: 0;
+	color: #fff;
+	font-family: 'Quantico', sans-serif;
+	font-size: 1.1em;
+	line-height: 50px;
+	vertical-align: middle;
 	text-align: center;
+}
+nav .nav-title h1{ /*Override h1 so it centers vertically*/
+	margin: 0;
+	padding: 0;
 }
 nav .nav-links{
 	display: inline-block;
@@ -202,18 +227,17 @@ nav a, nav a:active, nav a:selected {
 #drawer-button{
 	position: fixed;
 	left: 20px;
-	top: 30px;
+	top: 25px;
 	width: 30px;
 	height: 10px;
 	/*padding: 10px 35px 16px 0px;*/
 	padding: 16px 5px 12px 0px;
 	cursor: pointer;
 	z-index: 1000;
-	background-color: #8E24AA;
-	outline: 5px solid #8E24AA;
+	background-color: rgba(142,36,170,0.7);
+	outline: 5px solid rgba(142,36,170,0.7);
 }
 #drawer-button span, #drawer-button span:before, #drawer-button span:after {
-  
   border-radius: 1px;
   height: 5px;
   width: 35px;
@@ -228,7 +252,6 @@ nav a, nav a:active, nav a:selected {
 #drawer-button span:after {
   bottom: -10px;
 }
-
 #drawer-button span, #drawer-button span:before, #drawer-button span:after {
   transition: all 500ms ease-in-out;
 }
@@ -297,7 +320,6 @@ nav a, nav a:active, nav a:selected {
 	margin: 0;
 	padding-top: 20px;
 }
-
 #drawer .social-container{
 	padding: 0;
 	margin: 0;
@@ -328,6 +350,143 @@ nav a, nav a:active, nav a:selected {
 }
 
 
+/*--------------------------*/
+/*  CARDS */
+/*	Card size is respective of the column they are in.*/
+/*--------------------------*/
+.card{
+	width: 100%;
+	margin: 0;
+	padding:0;
+	padding-bottom: 15px;
+	background: #ccc;
+}
+.card-header{
+	background-color: #8E24AA;
+
+}
+.card .time{
+	width:100%;
+	float:right;
+	padding: 4px;
+	background-color: #8E24AA;
+	color: #fff;
+	text-align: center;
+}
+
+.card h2,.card h4 {
+	font-family: 'Quantico', sans-serif;
+	display: inline-block;
+	color: #fff;
+	margin: 0;
+	padding: 7px;
+}
+.card h4{
+	font-size: 0.9em;
+}
+.card p{
+	margin: 0;
+	padding: 0;
+}
+
+.card img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.card .share-icon{
+	float:right;
+}
+.card button{
+
+	width: 100%;
+	height: 30px;
+	margin:0;
+	padding: 0;
+	font-family: 'Quantico', sans-serif;
+	font-size: 1.1em;
+	background-color: #8E24AA;
+	color: #fff;
+	text-align: center;
+	
+}
+
+
+
+/* ------------------------------------------------ */
+/*		SLANTED SECTIONS/DIVS						*/
+/* ------------------------------------------------ */
+.slant-top {
+  background: #8E24AA;
+  position: absolute;
+  left:0;
+  bottom:0px;
+  width: 100%;
+  height: 120px;
+}
+.slant-top:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -36px;
+  width: 100%;
+  height: 100%;
+  background: #8E24AA;
+  -webkit-transform: skewY(-2.5deg);
+  -moz-transform: skewY(-2.5deg);
+  -ms-transform: skewY(-2.5deg);
+  -o-transform: skewY(-2.5deg);
+  transform: skewY(-2.5deg);
+  -webkit-backface-visibility: hidden;
+}
+.slant-top-content {
+  text-align: center;
+  margin: 10px auto;
+  padding: 0 0 0 20px;
+  padding-bottom: 10px;
+  position: relative;
+  max-width: 800px;
+  height: 2vh;
+}
+
+/*=================HEADER SLANT ============*/
+.header-slant {
+  z-index: 1;
+  position: relative;
+  left: 0;
+  top: 0px;
+  padding-top: 20px;
+}
+
+.header-slant .skew:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  overflow: visible;
+  width: 100%;
+  height: 200px;
+  background: #8E24AA;
+  z-index: -1;
+  -webkit-transform: skewY(-2deg);
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -o-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: initial;
+}
+
+.header-slant .skew .header-inner {
+  /*padding: 20px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /* ------------------------------------------------ */
 /*		Media Queries								*/
@@ -342,7 +501,6 @@ nav a, nav a:active, nav a:selected {
 
 
 
-
 @media screen and (max-width:1000px) {
 	nav .nav-links {
 		display: none;
@@ -351,6 +509,13 @@ nav a, nav a:active, nav a:selected {
 	}
 	nav .nav-title {
 		width: 100%;
+	}
+	#drawer .drawer-side{
+		width: 100%;
+		padding-top: 60px;
+	}
+	#drawer .screen-side{
+		width: 0;
 	}
 }
 
