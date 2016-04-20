@@ -8,17 +8,19 @@
 	<link href='https://fonts.googleapis.com/css?family=Quantico' rel='stylesheet' type='text/css'>
 	<!--Font-Awesome-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
+	<!--Slider-->
+  <link rel="stylesheet" type="text/css" href="js/lib/jquery.bxslider.css">
 	<!--Styles-->
   <link rel="stylesheet" type="text/css" href="css/zcss-core.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
 </head>
 
 
 
 <body>
 
-  
+  <!-- POPUP SIDE DRAWER -->
   <div id="drawer">
     <div class="drawer-side">
         
@@ -26,20 +28,20 @@
         <div class="row">
           <h4>Code for FoCo</h4>
           <hr/>
-            <a href="#top">Back To Top</a>
-            <a href="#lp-events">Events and Posts</a>
-            <a href="#lp-mission">Our Mission</a>
-            <a href="#lp-help">Helping Community</a>
-            <a href="#lp-skills">Improve Your Skills</a>
-            <a href="#lp-partners">Partners</a>
+            <a class="slide-effect" href="#top">Back To Top</a>
+            <a class="slide-effect" href="#lp-events">Events and Posts</a>
+            <a class="slide-effect" href="#lp-mission">Our Mission</a>
+            <a class="slide-effect" href="#lp-help">Helping Community</a>
+            <a class="slide-effect" href="#lp-skills">Improve Your Skills</a>
+            <a class="slide-effect" href="#lp-partners">Partners</a>
         </div>
 
         <div class="row">
           <h4>Our Community</h4>
           <hr/>
-            <a href="https://www.codeforamerica.org/">Code For America</a>
-            <a href="http://www.codefordenver.org/">Code For Denver</a>
-            <a href="http://www.codeforboulder.org/">Code For Boulder</a>
+            <a class="slide-effect" href="https://www.codeforamerica.org/">Code For America</a>
+            <a class="slide-effect" href="http://www.codefordenver.org/">Code For Denver</a>
+            <a class="slide-effect" href="http://www.codeforboulder.org/">Code For Boulder</a>
         </div>
     
         <!-- Social -->
@@ -97,15 +99,21 @@
     </div>
 
 
-
+        <!-- HERO SLIDER - LANDING -->
         <div class="hero-image row">
-          <img src='../assets/slideshow/image-a.jpg';
+              <ul class="bxslider">
+                <li>
+                  <img src="../assets/slideshow/image-a.jpg"/>
+                  <div class="call-to-action">
+                      <h4>This is only a test of the emergency broadcast system. Had this been a real emergency... you'd be fucked.</h4>
+                      <div class="bounce"><a href="#lp-events"><i class="big-arrow fa fa-angle-down" aria-hidden="true"></i></a></div>
+                  </div>
+                </li>
+                <li><img src="../assets/slideshow/image-b.jpg" /></li>
+                <li><img src="../assets/slideshow/image-c.jpg" /></li>
+              </ul>
         </div>
-          <!--  <div class="container row">
-              <div class="">
-                  <h1>CALL TO ACTION</h1>
-              </div>
-            </div> -->
+
 
         
         <div class="slant-top">
@@ -128,8 +136,10 @@
 
 
 
+
+
 <!-- EVENTS AND RECENT POSTS -->	
-<section id="lp-events" class="section events events-background">
+<section id="lp-events" class="section drawer-btn-space events-background">
           
 
           <div class="container row">
@@ -140,32 +150,7 @@
             <!-- Repeat From Wintersmith-->
             <div class="card">
 
-
-                <div class="row">
-                    <div class="row card-header">
-                      <div class="three-fourth">
-                          <!-- Title -->
-                          <h2>Code For FoCo - Openhouse</h2>
-                      </div>
-                      <div class="one-fourth">
-                          <!-- Share Icon -->
-                          <i class="share-icon fa fa-share-alt" aria-hidden="true"></i>
-                      </div>
-                    </div>
-
-                    <div class="one-fourth">
-                            <img src="../assets/slideshow/image-a.jpg" alt="code for foco">
-                    </div>
-                    <div class="one-half">
-                        <div class="row">
-                          <!-- DESCRIPTION -->
-                            <p class="desc">
-                              Code For FoCo is welcoming you to an open house. Bring your friends and family to this learning experience. We will cover how Code For Fort Collins works, how they can teach more about programming, and how we support our local communities through code.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="one-fourth">
-                        <div class="row">
+               
                         <!-- Date -->
                           <div class="time">
                             <h2 id="date">5/20/2016</h2><br/>
@@ -205,7 +190,7 @@
 
 
 <!-- MISSION STATEMENT -->	
-<section id="lp-mission" class="section mission-background">
+<section id="lp-mission" class="section drawer-btn-space mission-background">
 <!-- <div class="hero-image">
   <div class="section-mission">
 </div> -->
@@ -265,9 +250,10 @@
 
 
 <script   src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/autoscroll.js"></script>
-<script type="text/javascript" src="js/heroslider.js"></script>
-<script type="text/javascript" src="js/drawer.js"></script>
+<script type="text/javascript" src="js/lib/jquery.bxslider.min.js"></script>
+
+
+<script type="text/javascript" src="js/zcss.js"></script>
 
 
 </body>
