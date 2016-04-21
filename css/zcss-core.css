@@ -27,24 +27,14 @@ h1,h2,h3,h4,h5,h6,h7{
 p,i,quote,a{
 	font-family: "Courier New", Courier, monospace;
 }
-h1{
-	/*font-family: 'Nunito', sans-serif;*/
-	font-family: 'Quantico', sans-serif;
-}
+h1{	font-family: 'Quantico', sans-serif; }
 
-h4{
-	font-size: 1.5em;
-}
+h4{	font-size: 1.5em; }
 
-a {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
+a { text-decoration: none; }
+a:active { text-decoration: none; }
+a:hover { text-decoration: none; }
+
 code {
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 1em;
@@ -136,7 +126,7 @@ code strong{
 	height: 100vh;
 	min-height: 100%;
 	width: 100%;
-	background: #685172;
+	background-color: #685172;
 }
 .section:after { /* fixes issue, don't have to clearfix anymore */
   content: "";
@@ -224,7 +214,7 @@ nav a, nav a:active, nav a:selected {
   border-radius: 1px;
   height: 5px;
   width: 35px;
-  background: #fff;
+  background-color: #fff;
   position: absolute;
   display: block;
   content: '';
@@ -348,67 +338,109 @@ nav a, nav a:active, nav a:selected {
 
 /*--------------------------*/
 /*  CARDS */
-/*	Card size is respective of the column they are in.*/
 /*--------------------------*/
 .card{
-	width: 20%;
-	margin: 2px;
-	padding:0;
-	padding-bottom: 15px;
-	background: #ccc;
+	display: inline-block;
+	position: relative;
+	
+	padding: 0;
+	margin: 0;
+	background: rgba(24,135,119,0.7);
+	border: 4px solid rgba(24,135,119,0.8);
+	cursor: pointer;
 }
-.card-header{
-	background-color: #188777;
-	color: #fff;
+.card-sml{
+	width: 280px;
+	height: 280px;
 }
-.card .time{
-	width:100%;
-	float:right;
-	padding: 4px;
-	background-color: #8E24AA;
-	color: #fff;
-	text-align: center;
+.card-big{
+	margin: 4px;
+	width: 400px;
+	height: 300px;
+}
+.card-link{
+	text-decoration: none;
 }
 
-.card h2,.card h4 {
-	font-family: 'Quantico', sans-serif;
-	display: inline-block;
-	margin: 0;
-	padding: 7px;
+.card .header{
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		background-color: rgba(0,0,0,0.5);
 }
 .card h4{
-	font-size: 0.9em;
-}
-.card p{
+	display: inline-block;
 	margin: 0;
 	padding: 0;
+	color: #fff;
+	font-size: 1.3em;
+	padding: 5px 5px 5px 10px;
+}
+
+.card .date-time{
+	position: absolute;
+	bottom:0;
+	left:0;
+	background-color:rgba(0,0,0,0.5);
+	width: 100%;
+}
+.card .date{
+	font-size: 1.2em;
+}
+.card .time{
+	display: inline-block;
+	font-size: 1.0em;
+}
+
+.card .view-event{
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	font-size: 14px;
+	text-align: right;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.card .description{
+	position:absolute; 
+    bottom:0;
+    width:100%;
+    height:100%;
+	margin: 0;
+	padding: 0;
+	background-color:rgba(24,135,119,0.97);
+	z-index: 1;
+	
+}
+.card .description p{
+	padding: 10px;
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	font-size: 16px;
 }
 
 .card img{
-	display: inline-block;
-	width: 100%;
 	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-.card .share-icon{
-	float:right;
-}
-.card button{
-
 	width: 100%;
-	height: 30px;
-	margin:0;
-	padding: 0;
-	font-family: 'Quantico', sans-serif;
-	font-size: 1.1em;
-	background-color: #8E24AA;
+}
+
+
+.card .more-arrow{
+	/*display: block;
+	text-align: right;
+	margin: auto;*/
+
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-size: 46px;
 	color: #fff;
-	text-align: center;
+	padding-right: 4%;
 	
 }
-
 
 
 /* ------------------------------------------------ */
@@ -483,47 +515,6 @@ nav a, nav a:active, nav a:selected {
 
 
 
-/* ------------------------------------------------ */
-/*		Media Queries								*/
-/* ------------------------------------------------ */
-
-@media screen and (min-width:600px) {
- /* section {
-    margin-left: 25%;
-  }*/
-}
-
-
-
-
-@media screen and (max-width:1000px) {
-	nav .nav-links {
-		display: none;
-		width:0;
-		height:0;
-	}
-	nav .nav-title {
-		width: 100%;
-	}
-	#drawer .drawer-side{
-		width: 100%;
-		padding-top: 60px;
-	}
-	#drawer .screen-side{
-		width: 0;
-	}
-	.hero-image .call-to-action{
-		position: absolute;
-		left: 0;
-		top: 0;
-		min-width: 50%;
-		max-width: 70%;
-		max-height: 35%;
-	}
-	.hero-image h4{
-		font-size: 1em;
-	}
-}
 
 
 /* ------------------------------------------------ */
@@ -567,17 +558,37 @@ hr{
 	margin: 0;
 	background: rgba(24,135,119,0.7);
 	border: 4px solid rgba(24,135,119,0.8);
+	cursor: pointer;
+}
+.hero-image .call-to-action .header{
+		max-height: 50px;
+		margin: 0;
+		padding: 3px;
+		background-color: rgba(0,0,0,0.3);
 }
 .hero-image h4{
+	margin: 0;
+	padding: 0;
 	color: #fff;
 	padding: 5px 5px 5px 10px;
 }
-.hero-image .big-arrow{
-	display: block;
-	font-size: 100px;
+.hero-image p{
+		margin: 14px;
+		color: #fff;
+		font-size: 16px;
+}
+.hero-image .more-arrow{
+	/*display: block;
+	text-align: right;
+	margin: auto;*/
+
+	position: absolute;
+	right: 10px;
+	top: 0;
+	font-size: 46px;
 	color: #fff;
-	text-align: center;
-	margin: auto;
+	padding-right: 4%;
+	
 }
 
 
@@ -586,24 +597,24 @@ hr{
 /* ------------------------------------------------ */
 
 /* RESPONSIVE ARROWS */
-.arrow-right,.arrow-left,.arrow-up,.arrow-down{
+#arrow-right,#arrow-left,.arrow-right,.arrow-left,.arrow-up,.arrow-down{
   width: 1%;
   height: 1%;
-  border:       solid rgba(83,66,91,1);
+  border: solid rgba(83,66,91,1);
   border-width: 0 0.5em 0.5em 0;
-  display:      block;
-  padding:      0.7em;
+  display: block;
+  padding: 0.7em;
   margin: auto;
 }
 
-.arrow-right { 
+#arrow-right,.arrow-right { 
 	-webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-.arrow-left  {
+#arrow-left,.arrow-left  {
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
@@ -679,4 +690,67 @@ hr{
     -moz-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
     -o-transform: translateY(-15px);
-    transform: translateY(-15px); } }
+    transform: translateY(-15px); } 
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------ */
+/*		Media Queries								*/
+/* ------------------------------------------------ */
+
+@media screen and (min-width:600px) {
+ /* section {
+    margin-left: 25%;
+  }*/
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+	nav .nav-links {
+		display: none;
+		width:0;
+		height:0;
+	}
+	nav .nav-title {
+		width: 100%;
+	}
+	#drawer .drawer-side{
+		width: 100%;
+		padding-top: 60px;
+	}
+	#drawer .screen-side{
+		width: 0;
+	}
+	.hero-image .call-to-action{
+		position: absolute;
+		left: 20%;
+		top: 30%;
+		min-width: 50%;
+		max-width: 70%;
+		max-height: 35%;
+		border-radius: 1%;
+	}
+	.hero-image h4{
+		font-size: 1em;
+	}
+}
+
+
+
+
+
+
+
+
+
