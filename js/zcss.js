@@ -24,19 +24,19 @@ $( document ).ready(function() {
 
 	$('#drawer-button').click(function(){
 		this.classList.toggle( "active" );
-		$('#drawer').slideToggle('fast');
+		$('#drawer').slideToggle(300);
 
 	});
 
 	$('.screen-side').click(function(){
 		$('#drawer-button').removeClass( "active" );
-		$('#drawer').slideToggle('fast');
+		$('#drawer').slideToggle(300);
 	});
 
     $('.drawer-side a').click(function(){
     	console.log("Hello");
 		$('#drawer-button').removeClass( "active" );
-		$('#drawer').slideToggle('fast');    	
+		$('#drawer').slideToggle(300);    	
     });
 
 
@@ -130,6 +130,17 @@ function setupEvents(){
             		//Append to card
             		newCard.appendChild(newDesc);
 
+            //Make view event button
+            var newViewEvent = document.createElement('div');
+            newViewEvent.className = "view-event";
+            var newH4 = document.createElement('h4');
+            newH4.innerHTML = "Click to View Event";
+            	//append h4 to event button
+            	newViewEvent.appendChild(newH4);
+            		//append to description
+            		newDesc.appendChild(newViewEvent);
+
+
             //Make date-time
             var dateTime = document.createElement('div');
             dateTime.className = "date-time";
@@ -179,10 +190,10 @@ function setupEvents(){
             $(".description").hide();
 
 			var show = function() {
-			    $(this).children(".description").slideDown(500);
+			    $(this).children(".description").slideDown(400);
 			};
 			var hide = function() {
-			    $(this).children(".description").slideUp(500);
+			    $(this).children(".description").slideUp(400);
 			};  
 
 			$(".card").hover(show, hide); 
