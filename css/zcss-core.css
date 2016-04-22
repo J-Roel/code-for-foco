@@ -564,7 +564,7 @@ hr.icon:after{
 
 
 .event{
-	padding: 20px;
+	padding: 10px;
 	background-size: 200% 100%;
     background-image: linear-gradient(to right, transparent 50%, rgba(24,135,119,0.2) 100%);
 	transition: 0.2s;

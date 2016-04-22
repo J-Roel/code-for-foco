@@ -102,9 +102,11 @@ $( document ).ready(function() {
 	 //    </a>	
 
 
-function setupEvents(){
-	var children = $(".events-data").children();
-	var myContainer = $('.events-container');
+
+
+function buildList(dataLocation, destination){
+	var children = dataLocation;
+	var myContainer = destination;
 
 	if(children.length > 0){
 
@@ -211,7 +213,24 @@ function setupEvents(){
 
 	}//End if
 }//End setup events
-setupEvents();
+
+
+
+
+/*
+	Syntax: buildList(dataLocation, destination)
+	- datalocation: parent element where all the div's
+	containing our datasets reside
+	- destination: element (container) that we want our newly built
+	cards to be appended to.
+*/
+
+//This is for EVENTS
+buildList( $(".events-data").children(), $(".events-container") );
+
+//This is for BLOG
+buildList( $(".blog-data").children(), $(".blog-container") );
+
 //---------------------------------------------------------------------------
 
 
