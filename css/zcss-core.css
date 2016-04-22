@@ -37,9 +37,7 @@ h1,h2,h3,h4,h5,h6,h7{
 p,i,quote,a{
 	font-family: "Courier New", Courier, monospace;
 }
-h1{	font-family: 'Quantico', sans-serif; }
 
-h4{	font-size: 1.5em; }
 
 a { text-decoration: none; }
 a:active { text-decoration: none; }
@@ -663,7 +661,7 @@ hr.icon:after{
 	margin: 0;
 	padding: 0;
 	color: #fff;
-	font-size: 50px;
+	font-size: 3em;
 	padding: 5px 5px 5px 10px;
 }
 .hero-image p{
@@ -763,8 +761,6 @@ section.module.parallax {
   background-attachment: fixed;
   background-size: cover;
 }
-
-
 
 
 

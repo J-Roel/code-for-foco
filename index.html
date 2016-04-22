@@ -9,9 +9,10 @@
 	<!--Font-Awesome-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!--Slider-->
-  <link rel="stylesheet" type="text/css" href="js/lib/jquery.bxslider.css">
+  <!-- <link rel="stylesheet" type="text/css" href="js/lib/jquery.bxslider.css"> -->
 	<!--Styles-->
   <link rel="stylesheet" type="text/css" href="css/zcss-core.css">
+  <link rel="stylesheet" type="text/css" href="css/hero-slider.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
@@ -82,7 +83,7 @@
                   <div class="nav-title"><h1>Code For FoCo</h1></div>
                   <div class="nav-links">
                       <a href="#lp-events">Events</a>
-                      <a href="#lp-events">Blog</a>
+                      <a href="#lp-blog">Blog</a>
                       <a href="#lp-mission">Our Mission</a>
                       <a href="#lp-help">Helping Community</a>
                       <a href="#lp-skills">Improve Your Skills</a>
@@ -92,47 +93,49 @@
             </header>
  
            
+              <!-- Hero Slider -->
+              <section class="cd-hero">
+                <ul class="cd-hero-slider autoplay">
+                  
+                  <li class="selected">
+                    <div class="cd-half-width cd-img-container">
+                      <img src="assets/images/computer-slogan.png" alt="tech 2">
+                    </div>
+                    <div class="cd-half-width">
+                      <h2>Welcome!</h2>
+                      <p>Thanks for stoping by Code For Fort Collins. Check out our events for upcoming meet-ups.</p>
+                      <a href="#lp-events" class="cd-btn">Events
+                      <i class="bounce fa fa-chevron-down" aria-hidden="true"></i></a>
+                    </div>
+                  </li>
 
+                  <li>
+                    <div class="cd-full-width">
+                      <h2>Community Minded</h2>
+                      <p>Code For Fort Collins is a commuity supporting organization that helps non-profits achieve their goals.</p>
+                      <a href="#0" class="cd-btn">Learn More</a>
+                      
+                    </div> <!-- .cd-full-width -->
+                  </li>
 
-        <!-- HERO SLIDER - LANDING -->
-        <div class="hero-image">
-              <ul class="bxslider">
-                <li>
-                  <img src="../assets/slideshow/image-a.jpg"/>
-                  <a href="#lp-events">
-                    <div class="call-to-action">
-                      <div class="header">
-                        <h4>Community</h4>
-                        <i class="bounce more-arrow fa fa-angle-down" aria-hidden="true"></i>
-                      </div>
-                      <p>Code For Fort Collins is reaching out to the community. Do you need visual outreach for your idea, but don't have the financial well being? We can help.</p>    
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <img src="../assets/slideshow/image-b.jpg"/>
-                  <a href="#lp-partners">
-                    <div class="call-to-action">
-                      <div class="header">
-                        <h4>Partners</h4>
-                        <i class="more-arrow fa fa-angle-down" aria-hidden="true"></i>
-                      </div>
-                      <p>We do more than just help community. We work with great local companies. This helps you to improve your networking, share your projects and find like minded people.</p>    
-                    </div>
-                </li>
-                <li>
-                <img src="../assets/slideshow/image-c.jpg"/>
-                  <a href="#lp-partners">
-                    <div class="call-to-action">
-                      <div class="header">
-                        <h4>Learning to Learn</h4>
-                        <i class="more-arrow fa fa-angle-down" aria-hidden="true"></i>
-                      </div>
-                      <p>Programming is difficult and learning is an important aspect that any good developer understands. We can help you improve your skills. Click to learn more.</p>    
-                    </div>
-                </li>
-              </ul>
-        </div>
+                  <li>
+                    <div class="cd-full-width">
+                      <h2>Slide title here</h2>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, explicabo.</p>
+                      <a href="#0" class="cd-btn">Start</a>
+                      <a href="#0" class="cd-btn secondary">Learn More</a>
+                    </div> <!-- .cd-full-width -->
+                  </li>
+               
+                  <!-- othe slides here -->
+               
+                </ul> <!-- END .cd-hero-slider -->
+               
+                
+
+              
+              </section>
+        <!-- </div> -->
 
 
         
@@ -180,36 +183,6 @@
                   data-endtime="12:00PM"
                   data-desc="Do you need visual outreach for your idea, but don't have the financial well being? Code For Fort Collins is reaching out to the community. Stop by and get to know us. Let us show you how we can help bring your ideas to life."
                   data-img="http://lorempixel.com/700/300/technics/2/"
-                  data-link="eventspage.html"
-                ></div>
-
-                <div
-                  data-title="Learn to code school - Javascript"
-                  data-date="6/01/2016"
-                  data-starttime="5:00PM"
-                  data-endtime="7:00PM"
-                  data-desc="An introduction to javascript and basic functionality"
-                  data-img="http://lorempixel.com/700/300/technics/1/"
-                  data-link="eventspage.html"
-                ></div>
-
-                <div
-                  data-title="Learn to code school - Javascript"
-                  data-date="6/01/2016"
-                  data-starttime="5:00PM"
-                  data-endtime="7:00PM"
-                  data-desc="An introduction to javascript and basic functionality"
-                  data-img="http://lorempixel.com/700/300/technics/3/"
-                  data-link="eventspage.html"
-                ></div>
-
-                <div
-                  data-title="Learn to code school - Javascript"
-                  data-date="6/01/2016"
-                  data-starttime="5:00PM"
-                  data-endtime="7:00PM"
-                  data-desc="An introduction to javascript and basic functionality"
-                  data-img="http://lorempixel.com/700/300/technics/4/"
                   data-link="eventspage.html"
                 ></div>
 
@@ -287,7 +260,7 @@
 
 
 <script type="text/javascript" src="js/zcss.js"></script>
-
+<script type="text/javascript" src="js/hero-slider.js"></script>
 
 </body>
 </html>

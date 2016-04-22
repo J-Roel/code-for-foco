@@ -213,12 +213,6 @@ setupEvents();
 
 
 
-
-
-
-
-
-
 });//END DOCUMENT ON READY
 
 
