@@ -15,7 +15,7 @@ var slidesWrapper = $('.cd-hero-slider');
 			slidesNumber = slidesWrapper.children('li').length,
 			visibleSlidePosition = 0,
 			autoPlayId,
-			autoPlayDelay = 13000;
+			autoPlayDelay = 9000;
 
 		//upload videos (if not on mobile devices)
 		uploadVideo(slidesWrapper);
