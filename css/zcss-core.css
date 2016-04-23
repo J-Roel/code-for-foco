@@ -125,13 +125,6 @@ code strong{
 }
 
 
-
-
-
-
-
-
-
 /* ------------------------------------------------ */
 /*		HEADER# VARIATIONS						*/
 /* ------------------------------------------------ */
@@ -148,8 +141,6 @@ header{
 	top:0;
 	z-index: 200;
 }
-
-
 .header-transparent{
 	background: transparent;
 	height: 90px;
@@ -223,26 +214,28 @@ nav a, nav a:active, nav a:selected {
 
 
 
-
-
-
-
-
-
-
 /*------------------------------------------------------*/
 /*				SECTION#								*/
 /*------------------------------------------------------*/
 /* The full page sections set */
 .section{
+	height: 100%;
 	height: 100vh;
 	min-height: 100%;
-	width: 100%;
+	width: 100vw;
+	min-width: 100%;
 	padding:0;
 	margin:0;
 	background-color: transparent;
 }
-
+.section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.white{
+	color: #fff !important;
+}
 .section-header-normal{
 	background: #685172;
 	height: 90px;
@@ -250,14 +243,16 @@ nav a, nav a:active, nav a:selected {
 
 .section-header{
 	background: transparent;
-	height: 150px;
+	padding: 0;
+	margin: 20px;
 }
 .section-header h1{
 	color: #000;
 	text-align: center;
-	line-height: 70px;
+	line-height: 61px;
+	font-weight: 300;
 	font-family: 'Quantico', sans-serif;
-	font-size: 3em;
+	font-size: 50px;
 	padding-top: 5px;
 	margin:0;
 	padding:0;
@@ -299,8 +294,9 @@ hr.icon:after{
 	padding: 16px 5px 12px 0px;
 	cursor: pointer;
 	z-index: 1000;
-	background-color: rgba(104,81,114,0.7);
-	outline: 5px solid rgba(104,81,114,0.7);
+
+	background-color: #0F228B;
+	outline: 5px solid #0F228B;
 }
 #drawer-button span, #drawer-button span:before, #drawer-button span:after {
   border-radius: 1px;
@@ -341,8 +337,8 @@ hr.icon:after{
 	position: fixed;
 	top:0;
 	left:0;
-	width: 100%;
 	width: 100vw;
+	min-width: 100%;
 	height: 100vh;
 	margin: 0;
 	padding: 0;
@@ -359,7 +355,7 @@ hr.icon:after{
 }
 .screen-side{
 	float: left;
-	width: 72%;
+	width: 72.5%;
 	height: 100vh;
 	background: rgba(0,0,0,0.5);
 	margin: 0;
@@ -374,7 +370,7 @@ hr.icon:after{
 	padding: 0;
 	margin: 7px;
 	background-size: 150% 100%;
-    background-image: linear-gradient(to right, transparent 75%, rgba(24,135,119,0.4) 100%);
+    background-image: linear-gradient(to right, transparent 75%, rgba(0,0,0,0.1) 100%);
 	transition: 0.2s;
 }
 #drawer a:hover{
@@ -413,9 +409,9 @@ hr.icon:after{
 	line-height: 70px;
 	vertical-align: middle;
 	text-align: center;
-	background-color: #685172;
+	background-color: #0F228B;
 		
-	border: 2px solid #53425b;
+	border: 2px solid #0a175b;
 	color: #fff;
 	margin-left: 1px;
 	margin-top: 4px;
@@ -423,7 +419,7 @@ hr.icon:after{
 	transition: 0.2s;
 }
 .social-mobile-icon:hover{
-	background-color:#53425b;
+	background-color:#0a175b;
 	box-shadow: 0.2px 0.2px 2px #000;
 }
 
@@ -431,29 +427,29 @@ hr.icon:after{
 /*--------------------------*/
 /*  CARDS */
 /*--------------------------*/
-.card-container{
+.event-container{
 
 }
-.card{
+.event{
 	display: inline-block;
 	width: 100%;
 	padding: 0;
 	margin: 20px;
 	cursor: pointer;
 }
-.card-sml{
+.event-sml{
 	width: 100%;
 	height: 280px;
 }
-.card-big{
+.event-big{
 	width: 100%;
 	height: 200px;
 }
-.card-link{
+.event-link{
 	text-decoration: none;
 }
 
-.card .header{
+.event .header{
 		position: absolute;
 		top:0;
 		left:0;
@@ -462,7 +458,7 @@ hr.icon:after{
 		padding: 0;
 		background-color: rgba(0,0,0,0.5);
 }
-.card h4{
+.event h4{
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -471,7 +467,7 @@ hr.icon:after{
 	padding: 0;
 
 }
-.card h4 title{
+.event h4 title{
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -481,7 +477,7 @@ hr.icon:after{
 	padding: 0;
 
 }
-.card p{
+.event p{
 	font-family: 'Nunito', sans-serif;
 	display: inline-block;
 	margin: 0;
@@ -491,10 +487,10 @@ hr.icon:after{
 	padding: 0;
 
 }
-.card .date-time{
+.event .date-time{
 	width: 100%;
 }
-.card .date{
+.event .date{
 	display: block;
 	width: 100%;
 	font-size: 1.2em;
@@ -503,7 +499,7 @@ hr.icon:after{
 	padding:0;
 	margin:0;
 }
-.card .time{
+.event .time{
 	display: inline-block;
 	padding: 0 4px 0 0;
 	text-align: right;
@@ -512,7 +508,7 @@ hr.icon:after{
 	font-size: 0.9em;
 }
 
-.card .view-event{
+.event .view-event{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -520,11 +516,11 @@ hr.icon:after{
 	text-align: right;
 	background-color: rgba(0,0,0,0.3);
 }
-.card .view-event h4{
+.event .view-event h4{
 	padding-right: 20px;
 }
 
-.card .description{
+.event .description{
 	position:absolute; 
     bottom:0;
     width:100%;
@@ -535,20 +531,20 @@ hr.icon:after{
 	z-index: 1;
 	
 }
-.card .description p{
+.event .description p{
 	padding: 10px;
 	color: #fff;
 	font-family: 'Nunito', sans-serif;
 	font-size: 16px;
 }
 
-.card img{
+.event img{
 	height: 100%;
 	width: 100%;
 }
 
 
-.card .more-arrow{
+.event .more-arrow{
 	/*display: block;
 	text-align: right;
 	margin: auto;*/
@@ -563,22 +559,37 @@ hr.icon:after{
 }
 
 
-.event{
+
+/*--------------------------*/
+/*  LISTS# */
+/*--------------------------*/
+.list-item{
 	padding: 10px;
 	background-size: 200% 100%;
-    background-image: linear-gradient(to right, transparent 50%, rgba(24,135,119,0.2) 100%);
+    background-image: linear-gradient(to right, transparent 50%, rgba(0,0,0,0.1) 100%);
 	transition: 0.2s;
+}
+.archive p{
+	padding: 1em 1em 1em 2em;
+}
+.archive i{
+	padding:10px;
 }
 
 
-/* ======================= SLANT */
+
+
+/*--------------------------*/
+/*  SLANTS# */
+/*--------------------------*/
 .slant-top {
-  background: #685172;
+  background: #fff;
   position: absolute;
   left:0;
-  bottom:0px;
-  width: 100%;
-  height: 120px;
+  bottom:-15px;
+  width: 100vw;
+  min-width: 100%;
+  height: 140px;
 }
 .slant-top:before {
   content: '';
@@ -587,14 +598,32 @@ hr.icon:after{
   top: -36px;
   width: 100%;
   height: 100%;
-  background: #685172;
+  background: #fff;
   -webkit-transform: skewY(-2.5deg);
   -moz-transform: skewY(-2.5deg);
   -ms-transform: skewY(-2.5deg);
   -o-transform: skewY(-2.5deg);
   transform: skewY(-2.5deg);
   -webkit-backface-visibility: hidden;
+  z-index: 0;
 }
+
+/*.slant-top:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 46px;
+  width: 100%;
+  height: 100%;
+  background: #685172;
+  -webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
+  transform: skewY(2deg);
+  -webkit-backface-visibility: hidden;
+  z-index: 0;
+}*/
 .slant-top-content {
   text-align: center;
   margin: 10px auto;
@@ -603,16 +632,18 @@ hr.icon:after{
   position: relative;
   max-width: 800px;
   height: 2vh;
+  z-index: 2;
 }
 
 
 /* SLANT BOTTOM ----------- */
 .slant-bottom {
-  background: #685172;
+  background-color: #0F228B;
   position: absolute;
   left:0;
   top:0;
-  width: 100%;
+  width: 100vw;
+  min-width: 100%;
   height: 120px;
 }
 .slant-bottom:before {
@@ -622,12 +653,12 @@ hr.icon:after{
   top: 36px;
   width: 100%;
   height: 100%;
-  background: #685172;
-  -webkit-transform: skewY(-2.5deg);
-  -moz-transform: skewY(-2.5deg);
-  -ms-transform: skewY(-2.5deg);
-  -o-transform: skewY(-2.5deg);
-  transform: skewY(-2.5deg);
+  background: #0F228B;
+  -webkit-transform: skewY(2deg);
+  -moz-transform: skewY(2deg);
+  -ms-transform: skewY(2deg);
+  -o-transform: skewY(2deg);
+  transform: skewY(2deg);
   -webkit-backface-visibility: hidden;
 }
 .slant-bottom-content {
@@ -642,9 +673,35 @@ hr.icon:after{
 
 
 
-
-
-
+.arrow-col {
+    width: 50%;
+}
+.div-arrow {
+    position: relative;
+    text-align: center;
+    background-color: red;
+    line-height: 2em;
+    border-top:0px solid #0F228B;
+    bottom:0;
+}
+.div-arrow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    background-color: #0F228B;
+    padding-bottom: 50%;
+    width:57.7%;
+    
+    z-index:2;
+    
+    -webkit-transform-origin:0 0;
+    -ms-transform-origin:0 0;
+    transform-origin:0 0;
+    
+    -webkit-transform: rotate(-30deg) skewX(30deg);;
+    -ms-transform: rotate(-30deg) skewX(30deg);
+    transform: rotate(-30deg) skewX(30deg);
+}
 
 
 
@@ -783,13 +840,27 @@ section.module.content {
   padding: 40px 0;
 }
 section.module.parallax {
-  height: 100vh;
+  width: 100vw;
+  min-width: 100%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
+section.module.parallax:last-child {
+	margin-bottom: 0;
+}
 
+
+/* ------------------------------------------------ */
+/*		HELPER CLASSES							*/
+/* ------------------------------------------------ */
+.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
 
 
@@ -807,7 +878,23 @@ section.module.parallax {
 
 
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:900px) {
+
+
+	/* -------- COLUMN LAYOUTS -------*/
+	/* -- Column Sizes -- */
+	.one-eighth { width: 21.25%; }*/
+	.one-fourth   { width:29.333%;}
+	.one-third    { width:47.5%; }
+	.one-half     { width:94%; }
+	.two-third    { width:94%; }
+	.three-fourth { width:94%;}
+	.three-fourth { width:94%;}
+	.full-page-pad,.full-column-pad   { width:94%; }
+	.full-page,.full-column  { width:100%; }
+
+
+
 	nav .nav-links {
 		display: none;
 		width:0;

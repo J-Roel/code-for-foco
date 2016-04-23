@@ -37,9 +37,19 @@ $( document ).ready(function() {
 		$('#drawer').slideToggle(300);    	
     });
 
+    //Mouse over for arrow jump
+    $('.cd-btn').hover(function(){
+    	$("i",this).addClass('bounce');
+    }, function(){
+    	$("i",this).removeClass('bounce');
+    });
 
 	//SCROLL FUNCTION TO MAKE HEADER DISAPPEAR
+	var parallax = document.querySelectorAll(".parallax"),
+     speed = 0.1;
+
 	$(window).on("scroll", function() {
+
 	    if($(window).scrollTop() > 100) {
 	        // $("#drawer-button").css("outline",'5px solid #8E24AA');
 	        // $("#drawer-button").css("background",'#8E24AA');
@@ -55,6 +65,39 @@ $( document ).ready(function() {
 
 
 
+
+
+
+// Original from: http://callmenick.com/post/advanced-parallax-scrolling-effect
+// New approach for mobile and single image moves created by txopi (quidware)
+
+window.requestAnimationFrame = window.requestAnimationFrame
+															 || window.mozRequestAnimationFrame
+															 || window.webkitRequestAnimationFrame
+															 || window.msRequestAnimationFrame
+															 || function(f){setTimeout(f, 1000/60)}
+
+function doParallax(){
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = -0.3;
+
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
+
+			var windowYOffset = window.pageYOffset, elementYOffset = el.offsetTop, elBackgrounPos = "50% " + ((windowYOffset - elementYOffset) * speed) + "px";
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  };
+}
+
+window.addEventListener('scroll', function(){ // on page scroll
+	requestAnimationFrame(doParallax) // call doParallax() on next available screen repaint
+}, false)
+
+window.addEventListener('resize', function(){ // on window resize
+	requestAnimationFrame(doParallax) // call doParallax() on next available screen repaint
+}, false)
 
 
 
@@ -119,7 +162,7 @@ function buildList(dataLocation, destination){
 			
 			//Make new card
 			var newCard = document.createElement('div');
-            newCard.className = 'event slide-effect card row';
+            newCard.className = 'list-item slide-effect event row';
             
         	//Setup column
         	var column = document.createElement('div');

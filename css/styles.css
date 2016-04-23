@@ -12,17 +12,22 @@ p {font-family: 'Nunito', sans-serif;}
 /* ========================= */
 /*		LANDING PAGE
 /* ========================= */
+
+/*-----------------------
+		HERO SLIDER
+-------------------------*/
 /* Welcome */
 .cd-hero-slider li:first-of-type {
-  background-color: #2c343b;
+  background-color: #0F228B;
 }
-
+cd-hero-slider .cd-btn{
+	background-color: rgba(96,139,15, 0.9);
+}
 /* Community */
 .cd-hero-slider li:nth-of-type(2) {
   background-color: #586775;
   background-image: url("../assets/slideshow/fortcollins.jpg");
 }
-
 /* Partners */
 .cd-hero-slider li:nth-of-type(3) {
   background-color: #3d4952;
@@ -35,13 +40,15 @@ p {font-family: 'Nunito', sans-serif;}
 
 
 
+/*-----------------------
+		SECTIONS
+-------------------------*/
 
 
-
-/* ------------------- SECTION EVENTS*/
+/* EVENTS */
 
 .events-overlay{
-background-color: #ccc;
+
 }
 
 
@@ -53,16 +60,51 @@ nav .nav-title{
 
 
 /*-------------------*/
+#lp-mission{
+	position: relative;
+}
+#lp-mission i{
+	font-size: 50px;
+	position: absolute;
+}
+#lp-mission i.left{
+	top: 0;
+	left: 0;
+}
+#lp-mission i.right{
+	bottom: 0;
+	right: 0;
+}
+#lp-mission-resize{
+	height: 60vh;
+}
 .mission-overlay{
 	background-color: rgba(0,0,0,0.7);
-	height: 100vh;
-	width: 100vw;	
+	height: 60vh;
+	width: 100vw;
 }
 section.module.parallax-1 {
-  background-image: url("../assets/slideshow/image-c.jpg");
+	/*transform: translateY(-150px);*/
+	background-image: url("../assets/slideshow/image-c.jpg");
 }
+.text-box{
+	position: absolute;
+	left: 24%;
+	top: 10%;
+	width: 40%;
+	padding: 5em;
+	/*border-radius:50%;*/
+}
+.text-box h4 {
+	font-size: 20px;
 
-
+}
+.mission-offset{
+	padding-top: 3em;
+}
+.goals-overlay{
+	background-color: #0F228B;
+}
 
 /*-------------------*/
 .help-overlay{
@@ -78,9 +120,9 @@ section.module.parallax-2 {
 /* ------------------- SECTION PARTNERS*/
 .partners-overlay{
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#685172+0,685172+0,685172+42,ffffff+44,ffffff+100&0+0,0+42,1+44,0.7+100 */
-background: -moz-linear-gradient(-40deg,  rgba(104,81,114,0) 0%, rgba(104,81,114,0) 47%, rgba(255,255,255,1) 49%, rgba(255,255,255,0.7) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-40deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(100deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: -moz-linear-gradient(-40deg,  rgba(104,81,114,0) 0%, rgba(104,81,114,0) 47%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-40deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(100deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00685172', endColorstr='#b3ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 	height: 100vh;
