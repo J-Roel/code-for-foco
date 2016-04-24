@@ -43,7 +43,9 @@ cd-hero-slider .cd-btn{
 /*-----------------------
 		SECTIONS
 -------------------------*/
-
+.section-header{
+	padding-top: 40px;
+}
 
 /* EVENTS */
 
@@ -75,8 +77,13 @@ nav .nav-title{
 	bottom: 0;
 	right: 0;
 }
-#lp-mission-resize{
+#lp-mission-resize-top{
+	min-height: 60vh;
+	
 	height: 60vh;
+}
+#lp-mission-resize-bottom{
+	
 }
 .mission-overlay{
 	background-color: rgba(0,0,0,0.7);
@@ -90,7 +97,7 @@ section.module.parallax-1 {
 .text-box{
 	position: absolute;
 	left: 24%;
-	top: 10%;
+	top: 20%;
 	width: 40%;
 	padding: 5em;
 	/*border-radius:50%;*/
@@ -102,28 +109,54 @@ section.module.parallax-1 {
 .mission-offset{
 	padding-top: 3em;
 }
+#lp-goals{
+	background-color: rgba(0,0,0,0.7);
+	height: 33vh;
+	width: 100vw;
+}
 .goals-overlay{
+	po
+	min-height: 20vh;
 	background-color: #0F228B;
 }
 
-/*-------------------*/
-.help-overlay{
-	background-color: rgba(0,0,0,0.7);
-	height: 100vh;
-	width: 100vw;	
+
+
+
+
+
+/*---------------------------------------------------------*/
+#lp-skills{
+	position: relative;
+	left:0;
+	top:0;
+	background-color: gray;
+	/*min-height: 100vh;*/
+	height: 100%;
+	width: 100vw;
+	min-width: 100%;
+}
+
+.skills-card{
+	padding:0;
+	margin:0;
+}
+.skills-overlay{
+	min-height: 100vh;
+	height: 100%;
 }
 section.module.parallax-2 {
   background-image: url("../assets/slideshow/image-c.jpg");
 }
-
-
-/* ------------------- SECTION PARTNERS*/
+#lp-skills.full-page, #lp-partners.full-page{
+	padding: 30px;
+}
+.cards{
+	padding: 2% 3% 4%;
+}
+/* ----------------------------------------- SECTION PARTNERS*/
 .partners-overlay{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#685172+0,685172+0,685172+42,ffffff+44,ffffff+100&0+0,0+42,1+44,0.7+100 */
-background: -moz-linear-gradient(-40deg,  rgba(104,81,114,0) 0%, rgba(104,81,114,0) 47%, rgba(255,255,255,1) 49%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-40deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(100deg,  rgba(104,81,114,0) 0%,rgba(104,81,114,0) 47%,rgba(255,255,255,1) 49%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00685172', endColorstr='#b3ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	background-color: rgba(255,255,255,0.7);
 
 	height: 100vh;
 	width: 100vw;	
@@ -133,13 +166,59 @@ section.module.parallax-3 {
 }
 
 
-.section-partners{
-	background-color: orange;
+
+
+
+#lp-partners.full-page{
+	padding-top: 4%;
 }
 
 
 
 
 
+
+/* ADDITIONAL ARROWS */
+/*Points up as white, sides are blue*/
+.triangle-white_up-blue_sides {
+	position: absolute;
+	bottom:0;
+	left:50%;
+	width: 0;
+	height: 0;
+	border-left: 50vw solid #0F228B;
+	border-right: 50vw solid #0F228B;
+	border-bottom: 50px solid white;
+	transform: translateX(-50vw);
+	z-index: 200;
+}
+
+
+.triangle-gray_up-blue_sides {
+	position: absolute;
+	top:0;
+	left:50%;
+	width: 0;
+	height: 0;
+	border-left: 50vw solid #0F228B;
+	border-right: 50vw solid #0F228B;
+	border-bottom: 50px solid gray;
+	transform: translateX(-50vw);
+	z-index: 200;
+}
+
+.triangle-transparent_up-gray_sides {
+	position: absolute;
+	top:0;
+	left:50%;
+	width: 0;
+	height: 0;
+	border-left: 50vw solid transparent;
+	border-right: 50vw solid transparent;
+	border-top: 50px solid gray;
+	transform: translateX(-50vw);
+	z-index: 200;
+
+}
 
 
