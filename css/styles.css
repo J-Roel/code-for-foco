@@ -45,6 +45,7 @@ cd-hero-slider .cd-btn{
 /* EVENTS */
 #lp-events{
 	height: 100%;
+	padding-bottom: 40px;
 }
 #lp-events .overlay{
 	height: 100%;
@@ -61,7 +62,15 @@ nav .nav-title{
 
 /*-------------------*/
 #lp-mission{
-	position: relative;
+	height: 70vh;
+	min-height: 100%;
+	width: 100vw;
+	min-width: 100%;
+}
+#lp-mission .overlay{
+	background-color: rgba(0,0,0,0.7);
+	height: 100%;
+	width: 100%;
 }
 #lp-mission i{
 	font-size: 50px;
@@ -82,11 +91,7 @@ nav .nav-title{
 	min-width: 100%;
 }
 
-#lp-mission .overlay{
-	background-color: rgba(0,0,0,0.7);
-	height: 100%;
-	width: 100%;
-}
+
 section.module.parallax-1 {
 	/*transform: translateY(-150px);*/
 	background-image: url("../assets/slideshow/image-c.jpg");
@@ -110,16 +115,6 @@ section.module.parallax-1 {
 }
 .mission-offset{
 	padding-top: 3em;
-}
-#lp-goals{
-	background-color: rgba(0,0,0,0.7);
-	height: 33vh;
-	width: 100vw;
-}
-.goals-overlay{
-	po
-	min-height: 20vh;
-	background-color: #0F228B;
 }
 
 
@@ -157,6 +152,11 @@ section.module.parallax-2 {
 	padding: 2% 3% 4%;
 }
 /* ----------------------------------------- SECTION PARTNERS*/
+#lp-partners {
+	height: 80vh;
+	min-height: 100%;
+
+}
 #lp-partners .overlay{
 	background-color: rgba(255,255,255,0.7);
 
