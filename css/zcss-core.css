@@ -220,9 +220,7 @@ nav a, nav a:active, nav a:selected {
   display: table;
   clear: both;
 }
-.white{
-	color: #fff !important;
-}
+
 .section-header-normal{
 	background: #685172;
 	height: 90px;
@@ -748,7 +746,7 @@ hr.icon:after{
   padding-bottom: 10px;
   position: relative;
   max-width: 800px;
-  height: 2vh;
+  height: 100%;
   z-index: 2;
 }
 
@@ -761,7 +759,8 @@ hr.icon:after{
   top:0;
   width: 100vw;
   min-width: 100%;
-  height: 120px;
+  height: 70px;
+  z-index: 10;
 }
 .slant-bottom:before {
   content: '';
@@ -1024,14 +1023,13 @@ section.module.parallax:last-child {
 	/* -- Column Sizes -- */
 	.one-eighth { width: 21.25%; }*/
 	.one-fourth   { width:29.333%;}
-	.one-third    { width:47.5%; }
+	.one-third    { width:94%; }
 	.one-half     { width:94%; }
 	.two-third    { width:94%; }
 	.three-fourth { width:94%;}
 	.three-fourth { width:94%;}
 	.full-page-pad,.full-column-pad   { width:94%; }
 	.full-page,.full-column  { width:100%; }
-
 
 
 	nav .nav-links {
@@ -1062,21 +1060,48 @@ section.module.parallax:last-child {
 		font-size: 1em;
 	}
 
+	.slant-top-LeftToRight:before {
+		height: 0;
+	}
 	.slant-top-LeftToRight {
-		height: 100px;
+		height: 0;
 	}
-	.slant-top-LeftToRight:after {
-		height: 0px;
+	.slant-content{
+		height: 0;
 	}
-
-
+	.slant-bottom{
+		z-index: 10;
+		height: 0;
+	}
 }
 
 
 
 
 
+/*============================================
+		FORMS
+==============================================*/
 
+form{
+	margin: 10px;
+	padding: 0.5%;
+}
+
+button {
+	font-size: 1em;
+	border-radius: 2%;
+	padding: 5px;
+}
+label {
+	font-size: 1.3em;
+	padding: 0 10px 0 20px;
+}
+input {
+	font-size: 1.3em;
+	padding: 5px;
+	border-radius: 2%;
+}
 
 
 

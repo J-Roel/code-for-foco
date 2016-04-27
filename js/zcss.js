@@ -19,6 +19,11 @@ $(function() {
 
 
 
+
+
+
+
+
 $( document ).ready(function() {
 
 	//DRAWER OPEN AND CLOSE FUNCTIONS

@@ -2,12 +2,8 @@
 /* Typography */
 h1, h2{	font-family: 'Quantico', sans-serif; }
 h4{	font-family: 'Quantico', sans-serif; font-size: 1.5em; }
-p {font-family: 'Nunito', sans-serif;}
+p, label, input, button {font-family: 'Nunito', sans-serif;}
 
-.slant-bottom{
-	z-index: 10;
-	height: 70px;
-}
 
 /* ========================= */
 /*		LANDING PAGE
@@ -167,13 +163,46 @@ section.module.parallax-3 {
 
 
 
-
-
 #lp-partners.full-page{
 	padding-top: 4%;
 }
 
 
+
+
+#lp-newsletter{
+	position: relative;
+	background: #fff;
+	height: 30vh;
+	min-height: 30vh;
+	width: 100vw;
+	min-width: 100%;
+}
+#lp-newsletter h4{
+	padding: 10px;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+#lp-newsletter form{
+	position: absolute;
+	top: 30%;
+	left: 20%;
+	/*-webkit-transform: translateY(-40%);
+	-moz-transform: translateY(-40%);
+	-ms-transform: translateY(-40%);
+	-o-transform: translateY(-40%);
+	transform: translateY(-40%);
+	line-height: 70px;*/
+}
+
+#lp-footer{
+	background: rgba(128,128,128,0.9);
+	height: 40vh;
+	min-height: 40vh;
+	width: 100vw;
+	min-width: 100%;
+}
 
 
 
@@ -222,3 +251,21 @@ section.module.parallax-3 {
 }
 
 
+
+/*========================
+	Helper functions
+========================*/
+
+.white{
+	color: #fff !important;
+}
+
+
+
+@media screen and (max-width:900px) {
+	#top{
+		height: 60vh;
+	}
+
+
+}
