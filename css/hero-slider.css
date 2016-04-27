@@ -275,7 +275,7 @@ Single slide style
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.2;
   margin: 0 auto 14px;
-  color: #ffffff;
+  color: #000;
   width: 90%;
   max-width: 400px;
 }

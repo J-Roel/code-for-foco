@@ -21,8 +21,8 @@ cd-hero-slider .cd-btn{
 }
 /* Community */
 .cd-hero-slider li:nth-of-type(2) {
-  background-color: #586775;
   background-image: url("../assets/slideshow/fortcollins.jpg");
+  color: #000 !important;
 }
 /* Partners */
 .cd-hero-slider li:nth-of-type(3) {
@@ -30,7 +30,6 @@ cd-hero-slider .cd-btn{
   background-image: url("../assets/slideshow/shakehands.png");
 }
 .cd-hero-slider li:nth-of-type(3) p, .cd-hero-slider li:nth-of-type(3) h2  {
-	color: #000 !important;
 }
 
 
@@ -47,8 +46,9 @@ cd-hero-slider .cd-btn{
 #lp-events{
 	height: 100%;
 }
-.events-overlay{
-
+#lp-events .overlay{
+	height: 100%;
+	width: 100%;
 }
 
 
@@ -83,10 +83,10 @@ nav .nav-title{
 #lp-mission-resize-bottom{
 	
 }
-.mission-overlay{
+#lp-mission .overlay{
 	background-color: rgba(0,0,0,0.7);
-	height: 60vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 }
 section.module.parallax-1 {
 	/*transform: translateY(-150px);*/
@@ -158,11 +158,11 @@ section.module.parallax-2 {
 	padding: 2% 3% 4%;
 }
 /* ----------------------------------------- SECTION PARTNERS*/
-.partners-overlay{
+#lp-partners .overlay{
 	background-color: rgba(255,255,255,0.7);
 
-	height: 100vh;
-	width: 100vw;	
+	height: 100%;
+	width: 100%;	
 }
 section.module.parallax-3 {
   background-image: url("../assets/slideshow/image-b.jpg");
@@ -247,8 +247,8 @@ section.module.parallax-3 {
 
 .triangle-transparent_up-gray_sides {
 	position: absolute;
-	top:0;
-	left:50%;
+	top: 0;
+	left: 50%;
 	width: 0;
 	height: 0;
 	border-left: 50vw solid transparent;
@@ -264,16 +264,15 @@ section.module.parallax-3 {
 /*========================
 	Helper functions
 ========================*/
-
 .white{
 	color: #fff !important;
 }
 
 
-
-@media screen and (max-width:900px) {
-	#top{
-		height: 60vh;
+@media screen and (max-width:800) {
+	
+	section#top.section{
+		height: 20vh;
 	}
 	#lp-footer{
 		width: 90%;
