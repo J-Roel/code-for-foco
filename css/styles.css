@@ -75,14 +75,13 @@ nav .nav-title{
 	bottom: 0;
 	right: 0;
 }
-#lp-mission-resize-top{
+#lp-mission .section{
 	min-height: 60vh;
-	
 	height: 60vh;
+	width: 100vw;
+	min-width: 100%;
 }
-#lp-mission-resize-bottom{
-	
-}
+
 #lp-mission .overlay{
 	background-color: rgba(0,0,0,0.7);
 	height: 100%;
@@ -144,8 +143,8 @@ section.module.parallax-1 {
 	padding:0;
 	margin:0;
 }
-.skills-overlay{
-	min-height: 100vh;
+#skills .overlay{
+	min-height: 100%;
 	height: 100%;
 }
 section.module.parallax-2 {
@@ -195,12 +194,6 @@ section.module.parallax-3 {
 	position: absolute;
 	top: 30%;
 	left: 20%;
-	/*-webkit-transform: translateY(-40%);
-	-moz-transform: translateY(-40%);
-	-ms-transform: translateY(-40%);
-	-o-transform: translateY(-40%);
-	transform: translateY(-40%);
-	line-height: 70px;*/
 }
 
 #lp-footer{
@@ -269,10 +262,17 @@ section.module.parallax-3 {
 }
 
 
-@media screen and (max-width:800) {
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
 	
-	section#top.section{
+	section#top.section, section#lp-mission,section#lp-partners.section {
 		height: 20vh;
+	}
+	section#lp-newsletter.section{
+		height: 10vh;
 	}
 	#lp-footer{
 		width: 90%;
@@ -298,15 +298,19 @@ section.module.parallax-3 {
 		font-size: 1.5em;
 		line-height: 20px;
 	}
+	#lp-skills {
+		display: none;
+	}
 	#lp-newsletter{
 		padding-top: 10px;
 		height: 25vh;
 	}
-	#lp-newsletter h4{
-		padding: 10px;
+	#lp-newsletter h1, #lp-newsletter h4{
+		text-align: left;
+		padding: 0;
 		margin: 0;
-		width: 100%;
-		text-align: center;
+		font-size: 1.5em;
+		line-height: 20px;
 	}
 
 	#lp-newsletter form{
@@ -332,5 +336,6 @@ section.module.parallax-3 {
 		padding: 0;
 		width: 95%;
 	}
+
 
 }

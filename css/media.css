@@ -70,7 +70,7 @@
     /*height: 30%;*/
     height: 30vh;
     min-height: 30%;
-    
+
     width: 100vw;
     min-width: 100%;
     padding:0;
@@ -78,6 +78,7 @@
     background-color: transparent;
   }
 
+  
 
 }
 

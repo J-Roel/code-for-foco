@@ -214,7 +214,8 @@ Single slide style
   left: 0;
   top: 0;
   /* this padding is used to align the text */
-  padding-top: 100px;
+  padding: 100px 0 0 0;
+  margin: 0;
   text-align: center;
   /* Force Hardware Acceleration in WebKit */
   -webkit-backface-visibility: hidden;
@@ -370,6 +371,21 @@ Single slide style
     font-size: 1.6rem;
   }
 }
+
+/*iphone 6*/
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+    .cd-hero-slider .cd-full-width,
+    .cd-hero-slider .cd-half-width {
+    padding: 100px 0 0 0;
+    margin: 0;
+  }
+
+
 
 /* -------------------------------- 
 

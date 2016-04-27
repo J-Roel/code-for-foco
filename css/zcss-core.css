@@ -211,7 +211,6 @@ nav a, nav a:active, nav a:selected {
 	min-height: 100%;
 	width: 100vw;
 	min-width: 100%;
-	padding:0;
 	margin:0;
 	background-color: transparent;
 }
@@ -1024,7 +1023,7 @@ section.module.parallax:last-child {
     min-height: 30%;
     width: 100vw;
     min-width: 100%;
-    padding:0;
+    padding:10px;
     margin:0;
     background-color: transparent;
   }
@@ -1089,6 +1088,7 @@ section.module.parallax:last-child {
 		
 		width: 85%;
 		margin: 0;
+		display: none;
 	}
 	.footer {
 		width: 94%;
