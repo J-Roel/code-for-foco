@@ -810,8 +810,8 @@ hr.icon:after{
 	left:50%;
 	width: 0;
 	height: 0;
-	border-left: 50vw solid #0F228B;
-	border-right: 50vw solid #0F228B;
+	border-left: 50vw solid gray;
+	border-right: 50vw solid gray;
 	border-top: 50px solid transparent;
 	transform: translateX(-50vw);
 	z-index: 200;
@@ -1072,6 +1072,14 @@ section.module.parallax:last-child {
 	.slant-bottom{
 		z-index: 10;
 		height: 0;
+	}
+	.card {
+		
+		width: 85%;
+		margin: 0;
+	}
+	.footer {
+		width: 94%;
 	}
 }
 
