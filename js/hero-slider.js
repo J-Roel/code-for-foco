@@ -15,7 +15,7 @@ var slidesWrapper = $('.cd-hero-slider');
 			slidesNumber = slidesWrapper.children('li').length,
 			visibleSlidePosition = 0,
 			autoPlayId,
-			autoPlayDelay = 9000;
+			autoPlayDelay = 9000;//9000 for prod
 
 		//upload videos (if not on mobile devices)
 		uploadVideo(slidesWrapper);
@@ -124,14 +124,6 @@ var slidesWrapper = $('.cd-hero-slider');
 	function updateNavigationMarker(marker, n) {
 		marker.removeClassPrefix('item').addClass('item-'+n);
 	}
-
-	// slidesWrapper.on('mouseover', function() {
-	// 	clearInterval(autoPlayId);
-	// });
-
-	// slidesWrapper.on('mouseout', function() {
-	// 	setAutoplay(slidesWrapper, slidesNumber, autoPlayDelay);
-	// });
 
 
 	$.fn.removeClassPrefix = function(prefix) {

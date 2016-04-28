@@ -49,33 +49,11 @@ $( document ).ready(function() {
     	$("i",this).removeClass('bounce');
     });
 
-	//SCROLL FUNCTION TO MAKE HEADER DISAPPEAR
-	var parallax = document.querySelectorAll(".parallax"),
-     speed = 0.1;
-
-	$(window).on("scroll", function() {
-
-	    if($(window).scrollTop() > 100) {
-	        // $("#drawer-button").css("outline",'5px solid #8E24AA');
-	        // $("#drawer-button").css("background",'#8E24AA');
-	        $("#header").fadeOut(500);
-
-	    } else {
-	    	$("#header").fadeIn(500);
-	        // $("#drawer-button").css("outline",'none');
-	        
-	        
-	    }
-	});
-
-
 
 
 
 
 // Original from: http://callmenick.com/post/advanced-parallax-scrolling-effect
-// New approach for mobile and single image moves created by txopi (quidware)
-
 window.requestAnimationFrame = window.requestAnimationFrame
 															 || window.mozRequestAnimationFrame
 															 || window.webkitRequestAnimationFrame
@@ -87,6 +65,14 @@ function doParallax(){
       speed = -0.3;
 
   window.onscroll = function(){
+
+  	 //Make header disappear - can add other scroll functions
+  	 if($(window).scrollTop() > 100) {
+	        $("header").fadeOut(500);
+	    } else {
+	    	$("header").fadeIn(500);
+	    }
+
     [].slice.call(parallax).forEach(function(el,i){
 
 			var windowYOffset = window.pageYOffset, elementYOffset = el.offsetTop, elBackgrounPos = "50% " + ((windowYOffset - elementYOffset) * speed) + "px";
@@ -95,7 +81,6 @@ function doParallax(){
     });
   };
 }
-
 window.addEventListener('scroll', function(){ // on page scroll
 	requestAnimationFrame(doParallax) // call doParallax() on next available screen repaint
 }, false)
@@ -171,7 +156,7 @@ function buildList(dataLocation, destination){
             
         	//Setup column
         	var column = document.createElement('div');
-        	column.className = 'one-third';
+        	column.className = 'col-xs-6 col-md-4';
             
             //Make Date
             var dateH4 = document.createElement('h4');
@@ -208,7 +193,7 @@ function buildList(dataLocation, destination){
             	//Now do the title, info
             	//Setup column
         		var column = document.createElement('div');
-        		column.className = 'two-third row';
+        		column.className = 'col-xs-10 col-md-8 row';
 
         		//Make row
         		var row = document.createElement('div');

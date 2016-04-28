@@ -125,7 +125,7 @@ Slider
 
 .cd-hero-slider {
   position: relative;
-  height: 360px;
+  min-height: 100%;
   overflow: hidden;
   margin: 0;
   padding:0;
