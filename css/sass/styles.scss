@@ -117,7 +117,7 @@ cd-hero-slider .cd-btn{
 	}
 	.social{
 		position: absolute;
-		bottom: 40px;
+		bottom: 1em;
 		left: 40%;
 		z-index: 100;
 	}
@@ -138,7 +138,7 @@ cd-hero-slider .cd-btn{
 		min-width: 100%;
 		margin:0;
 		position: relative; /*set this to relative for triangles*/	
-		padding: $sectionTopOffset 0 0 0;
+		padding: $sectionTopOffset;
 	}
 }
 
@@ -203,8 +203,6 @@ section.module.parallax-1 {
 	}
 	.card{
 		display: inline-block;
-		width: 30%;
-		height: 7em;
 		padding: 10px;
 		background-color: rgba(0,0,255,0.5);
 	}
@@ -746,7 +744,7 @@ nav a, nav a:active, nav a:selected {
 	z-index: 10;
 }
 .slant-bottom-white_top{
-	padding: ($triangleHeight * 2) 0 0 0;
+	padding: ($triangleHeight * 1.5) 0 0 0;
 }
 
 .triangle-gray-transparent-gray-down {

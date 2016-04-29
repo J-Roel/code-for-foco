@@ -4,7 +4,6 @@
 	https://codyhouse.co/gem/hero-slider/
 */
 
-
 var slidesWrapper = $('.cd-hero-slider');
 
 	//check if a .cd-hero-slider exists in the DOM
